@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Data} from "@angular/router";
+import {DataService} from "./data.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'water-calc-douar-moua';
+
+  foo: string;
+
+  constructor(private dataService: DataService) {
+    this.foo = this.dataService.foo
+  }
 }
