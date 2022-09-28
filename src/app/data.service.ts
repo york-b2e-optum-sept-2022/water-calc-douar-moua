@@ -9,18 +9,6 @@ export class DataService {
 
   foo='hello world'
 
-//   //hard property & values
-//   profile: IProfile = {
-//   name: 'test user',
-//   weight_lbs: 10,
-//   activity_level: 'AVERAGE'
-// }
-//   //hard property & values
-//   day = {
-//     name: DAY_NAME.MONDAY,
-//     goal_fL: 0,
-//     waterQty_fL: 0,
-// }
   constructor() { }
 }
 
