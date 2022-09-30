@@ -1,24 +1,26 @@
 <div class="m-3">
   <div class="input-group mb-3">
     <span class="input-group-text">Name</span>
-    <input type="text" class="form-control">
+    <input [(ngModel)]="name" type="text" class="form-control">
   </div>
 
   <div class="input-group mb-3">
     <span class="input-group-text">Weight</span>
-    <input type="number" class="form-control" placeholder="In Pounds">
+    <input [(ngModel)]="weight_lbs" type="number" class="form-control" placeholder="In Pounds">
   </div>
 
   <div ngbDropdown class="d-inline-block">
-    <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Activity Level</button>
+    <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+      {{activityLevel === undefined ? 'Select Activity Level' : activityLevel}}
+    </button>
     <div ngbDropdownMenu>
-      <button ngbDropdownItem>LOW</button>
-      <button ngbDropdownItem>AVERAGE</button>
-      <button ngbDropdownItem>HIGH</button>
+      <button (click)="onActivityLevelClick('LOW')" ngbDropdownItem>LOW</button>
+      <button (click)="onActivityLevelClick('AVERAGE')" ngbDropdownItem>AVERAGE</button>
+      <button (click)="onActivityLevelClick('HIGH')" ngbDropdownItem>HIGH</button>
     </div>
   </div>
 
   <div class="mt-3">
-    <button class="btn btn-primary">Submit</button>
+    <button (click)="onSubmit()" class="btn btn-primary">Submit</button>
   </div>
 </div>
