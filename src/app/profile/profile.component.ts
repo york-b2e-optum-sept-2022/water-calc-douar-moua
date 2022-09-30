@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ACTIVITY_LEVEL} from "../enums/ACTIVITY_LEVEL";
 import {DataService} from "../data.service";
-import {IProfile} from "../interfaces/IProfile";
 
 @Component({
   selector: 'app-profile',

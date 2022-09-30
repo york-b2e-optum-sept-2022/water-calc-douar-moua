@@ -12,11 +12,11 @@ export class DataService {
 
   //this STORES the user input from the setProfile()
   private profile: IProfile | null = null;
+  // this is a COPY of profile property BUT STORES NEW VALUE
   $profile = new Subject<IProfile>()
 
   private weekDayCount = 7;
   private week: IDay_NAME[] =[]
-
   private bottleSize_fL: number = 16;
 
   constructor() {}
@@ -107,6 +107,13 @@ export class DataService {
 
   getWeek(){
     return this.week;
+  }
+
+  getProfile(){
+    if (this.profile === null){
+      throw new Error('no profile found')
+    }
+    return this.profile
   }
 
   increaseDayValue(day: IDay_NAME,){

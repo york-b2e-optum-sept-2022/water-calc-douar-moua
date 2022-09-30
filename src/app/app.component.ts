@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import {Data} from "@angular/router";
 import {DataService} from "./data.service";
-import {IProfile} from "./interfaces/IProfile";
 
 @Component({
   selector: 'app-root',

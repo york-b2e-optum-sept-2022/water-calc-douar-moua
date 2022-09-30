@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {DAY_NAME} from "../enums/DAY_NAME";
 import {IDay_NAME} from "../interfaces/IDay_NAME";
 import {DataService} from "../data.service";
 
